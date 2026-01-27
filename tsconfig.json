@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "src/proxy",
+    "src/components/modules/MyProfile"
   ],
   "exclude": ["node_modules"]
 }

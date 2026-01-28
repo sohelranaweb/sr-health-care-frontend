@@ -19,4 +19,8 @@ export const specialitiesColumns: Column<ISpecialty>[] = [
     header: "Title",
     accessor: (speciality) => speciality.title,
   },
+  {
+    header: "Description",
+    accessor: (speciality) => speciality.description,
+  },
 ];

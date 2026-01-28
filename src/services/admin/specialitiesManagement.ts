@@ -10,6 +10,7 @@ import { revalidateTag } from "next/cache";
 export async function createSpeciality(_prevState: any, formData: FormData) {
   const validationPayload = {
     title: formData.get("title") as string,
+    description: formData.get("description") as string,
     icon: formData.get("file") as File,
   };
 

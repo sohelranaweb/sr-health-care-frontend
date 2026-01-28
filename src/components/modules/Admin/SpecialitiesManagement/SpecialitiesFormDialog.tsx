@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { createSpeciality } from "@/services/admin/specialitiesManagement";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
@@ -83,6 +84,16 @@ const SpecialitiesFormDialog = ({
               defaultValue={state?.formData?.title || ""}
             />
             <InputFieldError field="title" state={state} />
+          </Field>
+          <Field>
+            <FieldLabel htmlFor="description">Description</FieldLabel>
+            <Textarea
+              id="description"
+              name="description"
+              placeholder="Write something about..."
+              defaultValue={state?.formData?.description || ""}
+            />
+            <InputFieldError field="description" state={state} />
           </Field>
 
           <Field>

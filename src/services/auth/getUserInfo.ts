@@ -14,7 +14,7 @@ export const getUserInfo = async (): Promise<UserInfo | any> => {
     });
 
     const result = await response.json();
-    // console.log("result", result);
+    console.log("result get user", result);
     if (result.success) {
       const accessToken = await getCookie("accessToken");
 
@@ -43,7 +43,7 @@ export const getUserInfo = async (): Promise<UserInfo | any> => {
         "Unknown User",
       ...result.data,
     };
-
+    console.log("user info server", userInfo);
     return userInfo;
   } catch (error: any) {
     console.log(error);

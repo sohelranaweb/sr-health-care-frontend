@@ -1,12 +1,7 @@
 import Hero from "@/components/modules/Home/Hero";
-import MedicalSpecialities from "@/components/modules/MedicalSpecialities/MedicalSpecialities";
-import { getSpecialities } from "@/services/admin/specialitiesManagement";
-
 import Head from "next/head";
-export const dynamic = "force-static";
+
 export default async function Home() {
-  const data = await getSpecialities();
-  // console.log("data specialt", data.data);
   return (
     <>
       <Head>
@@ -20,8 +15,6 @@ export default async function Home() {
       </Head>
       <main className="">
         <Hero></Hero>
-        <MedicalSpecialities specialties={data.data}></MedicalSpecialities>
-        {/* <MedicalSpecialities></MedicalSpecialities> */}
       </main>
     </>
   );

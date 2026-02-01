@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { HeartPulse } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 
 import { getCookie } from "@/services/auth/takenHandlers";
@@ -17,8 +16,9 @@ const PublicNavbar = async () => {
     { href: "/ngos", label: "NGOs" },
   ];
   const accessToken = await getCookie("accessToken");
+  console.log("access Token", accessToken);
   const userInfo = accessToken ? await getUserInfo() : null;
-  // console.log("userInfo", userInfo);
+  console.log("userInfo", userInfo);
   const dashboardRoute = userInfo
     ? getDefaultDashboardRoute(userInfo.role)
     : "/";

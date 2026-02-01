@@ -42,11 +42,12 @@ export const loginUser = async (
         "Content-Type": "application/json",
       },
     });
-
+    console.log("res", res);
     const result = await res.json();
+    console.log("result", result);
 
     const setCookieHeaders = res.headers.getSetCookie();
-    // console.log("setCookieHeaders", setCookieHeaders);
+    console.log("setCookieHeaders", setCookieHeaders);
 
     if (setCookieHeaders && setCookieHeaders.length > 0) {
       setCookieHeaders.forEach((cookie: string) => {
@@ -91,7 +92,7 @@ export const loginUser = async (
       accessTokenObject.accessToken,
       process.env.JWT_SECRET as string,
     );
-    // console.log("verifiedToken", verifiedToken);
+    console.log("verifiedToken", verifiedToken);
 
     if (typeof verifiedToken === "string") {
       throw new Error("Invalid token");

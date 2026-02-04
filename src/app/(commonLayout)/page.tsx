@@ -3,6 +3,8 @@ import HomeDiagnosticService from "@/components/modules/Home/HomeDiagnosticeServ
 import WhySrCare from "@/components/modules/Home/WhySrCare";
 import Head from "next/head";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   return (
     <>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { HeartPulse } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
-
 import { getCookie } from "@/services/auth/takenHandlers";
 import MobileMenu from "./MobileMenu";
 import { getUserInfo } from "@/services/auth/getUserInfo";

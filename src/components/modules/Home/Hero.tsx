@@ -91,7 +91,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative hidden lg:block"
+              className="relative lg:block"
             >
               <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-[3rem] transform rotate-3 scale-105 blur-2xl" />
               {/* Hero Image - Online Doctor Consultation */}

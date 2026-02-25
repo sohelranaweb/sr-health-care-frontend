@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Sohel Rana Care",
   description:
     "Sohel Rana Care is basically online doctor appointment platform",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
